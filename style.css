@@ -6,11 +6,19 @@
   --blue2: #0e34a0;
   --bronze: #e09f3e;
   --dark: #00072d;
+  --violet: #6a3f8f;
 }
 
 body {
   /* background-color: var(--dark); */
-  background: linear-gradient(to top, var(--dark), var(--blue2));
+  background: linear-gradient(
+    to bottom,
+    var(--dark) 0%,
+    var(--dark) 25%,
+    var(--blue2) 70%,
+    var(--violet) 90%,
+    var(--bronze) 100%
+  );
   background-attachment: fixed;
   color: var(--blue1);
   font-family: "Playpen Sans", cursive;
@@ -36,6 +44,7 @@ main {
   padding: 20px;
   border-radius: 20px;
   flex: none;
+  cursor: pointer;
 }
 
 .graph canvas {
@@ -61,6 +70,7 @@ main {
   border: solid 1px var(--bronze);
   padding: 5px;
   border-radius: 5px;
+  cursor: text;
 }
 
 .text {
@@ -73,18 +83,43 @@ main {
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  gap: 20px;
 }
 
 .text-card {
   background-color: var(--dark);
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.image-card {
+  text-align: center;
+  border-radius: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.image-card img {
+  border-radius: inherit;
+  width: 700px;
+  max-width: 100%;
+  height: auto;
+  border: 5px solid var(--dark);
+}
+
+.image-card a {
+  color: var(--blue1);
 }
 
 .text-card:hover {
-  box-shadow: 7px 7px 15px var(--blue1);
+  box-shadow: 7px 7px 10px var(--blue1);
+}
+
+.image-card:hover {
+  box-shadow: 7px 7px 10px var(--blue1);
 }
 
 .hoverable:hover {
-  box-shadow: 5px 5px 15px var(--blue1);
+  box-shadow: 5px 5px 10px var(--blue1);
 }
